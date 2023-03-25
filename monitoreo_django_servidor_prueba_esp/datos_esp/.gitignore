@@ -8,3 +8,6 @@ datos_esp/.ebextensions/
 !.elasticbeanstalk/*.global.yml
 env_django_esp/*
 env_django_esp/
+datos_esp/datos_esp/__pycache__/
+datos_esp/recibir_datos/__pycache__/
+datos_esp/recibir_datos/migrations/
