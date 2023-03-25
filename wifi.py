@@ -24,9 +24,12 @@ if not wifi.isconnected():
 
 if wifi.isconnected():
     print('connected')
-    req=urequests.get('https://example.com')
-    print(req.status_code)
-    print(req.text)
+    # req=urequests.get('http://127.0.0.1:8000/recibir_datos/')
+    # print(req.status_code)
+    # print(req.text)
+    auth_data = {'id': 1,'corriente': 12, 'voltaje': 120}
+    resp = urequests.post('http://127.0.0.1:8000/recibir_datos/', data=auth_data)
+
 else:
     print('Tiem Out')
     print('Not Connected')
