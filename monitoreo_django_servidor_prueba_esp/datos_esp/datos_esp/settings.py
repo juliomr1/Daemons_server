@@ -28,7 +28,8 @@ DEBUG = False
 ALLOWED_HOSTS = [
     "127.0.0.1",
     "localhost",
-    "http://apirestdjango-1-env.eba-buqng22f.us-west-2.elasticbeanstalk.com"]
+    "http://apirestdjango-1-env.eba-buqng22f.us-west-2.elasticbeanstalk.com",
+    "*"]
 
 
 # Application definition
@@ -74,7 +75,14 @@ CORS_ALLOW_METHODS = (
     'PUT',
     'VIEW',
 )
+CORS_ORIGIN_ALLOW_ALL = False
 
+CORS_ORIGIN_WHITELIST = [
+    'http://localhost:3000',
+    'http://127.0.0.1:3000',
+    'http://localhost:8000',
+    'http://127.0.0.1:8000',
+]
 CORS_ALLOW_HEADERS = (
     'XMLHttpRequest',
     'X_FILENAME',
